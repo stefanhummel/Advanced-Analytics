@@ -1,0 +1,22 @@
+create table t_50999999 (
+  c_agency_cd VARCHAR(5),
+  c_site_no VARCHAR(15),
+  c_datetime TIMESTAMP,
+  c_tz_cd VARCHAR(6),
+  c_03_00045 FLOAT,
+  c_03_00045_cd VARCHAR(10),
+  c_14_00035 FLOAT,
+  c_14_00035_cd VARCHAR(10),
+  c_15_00036 FLOAT,
+  c_15_00036_cd VARCHAR(10),
+  c_17_00021 FLOAT,
+  c_17_00021_cd VARCHAR(10),
+  c_18_00052 FLOAT,
+  c_18_00052_cd VARCHAR(10),
+  c_19_00025 FLOAT,
+  c_19_00025_cd VARCHAR(10),
+  c_26_00045 FLOAT,
+  c_26_00045_cd VARCHAR(10),
+  c_28_62608 FLOAT,
+  c_28_62608_cd VARCHAR(10)
+);
