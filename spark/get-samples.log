@@ -1,0 +1,82 @@
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --load-samples
+--- dashDB spark-submit.sh ---
+
+User can also choose to set the following environment variables in order to prevent entering them everytime interactively.
+export DASHDBURL=https://<dashDB-host>:8443
+export DASHDBUSER=<UserName>
+export DASHDBPASS=<Password>
+
+Enter your dashDB URL and credentials:
+dashDB URL (https://<dashDB-host>:8443): ^C
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ export DASHDBURL=https://127.0.1.1:8443
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ export DASHDBUSER=bluadmin    
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ export DASHDBPASS=bluadmin
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --load-samples
+--- dashDB spark-submit.sh ---
+Status: ok
+Description: The examples have been successfully loaded.
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ spark-submit.sh --list-files apps
+spark-submit.sh: command not found
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --list-files apps
+--- dashDB spark-submit.sh ---
+ ReadWriteExampleKMeans.py
+ ReadExampleJson.py
+ ExceptionExample.py
+ SqlPredicateExample.py
+ ReadWriteExampleKMeansJson.py
+ example_utilities.egg
+ idax_examples.jar
+ ReadExample.py
+
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ll
+total 96
+drwxrwxr-x 4 user1 user1  4096 Nov  2 15:54 ./
+drwxrwxr-x 7 user1 user1  4096 Sep 28 15:35 ../
+drwxrwxr-x 2 user1 user1  4096 Nov  2 11:12 examples/
+drwxrwxr-x 2 user1 user1  4096 Nov  2 15:06 old/
+-rwxrwxr-x 1 user1 user1 72719 Nov  2 15:53 spark-submit.sh*
+-rw-rw-r-- 1 user1 user1  1889 Sep 28 19:38 steps.log
+-rw-rw-r-- 1 user1 user1   572 Oct  4 19:40 wget-sparksubmit.sh.log
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-files apps ReadWriteExampleKMeans.py
+--- dashDB spark-submit.sh ---
+Syntax error. Unrecognized input option: --download-files.
+
+Use the spark-submit.sh script to launch or manage Apache Spark applications within dashDB.
+  Usage:
+    spark-submit.sh <jar_filename> [args] --class <class_name> [app-options] [--jsonout]
+    spark-submit.sh <py_filename> [args] [app-options] [--jsonout]
+    spark-submit.sh [other-option] [--user <user_name>] [--jsonout]
+    spark-submit.sh --help
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-file apps ReadWriteExampleKMeans.py
+--- dashDB spark-submit.sh ---
+Status: SUCCESS
+Message: File(s) have been downloaded to the folder '/home/user1/Lab/HOL-dashDB/spark'
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-file apps ReadExampleJson.py
+--- dashDB spark-submit.sh ---
+Status: SUCCESS
+Message: File(s) have been downloaded to the folder '/home/user1/Lab/HOL-dashDB/spark'
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-file apps ExceptionExample.py
+--- dashDB spark-submit.sh ---
+Status: SUCCESS
+Message: File(s) have been downloaded to the folder '/home/user1/Lab/HOL-dashDB/spark'
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-file apps SqlPredicateExample.py
+--- dashDB spark-submit.sh ---
+Status: SUCCESS
+Message: File(s) have been downloaded to the folder '/home/user1/Lab/HOL-dashDB/spark'
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-file apps ReadWriteExampleKMeansJson.py
+--- dashDB spark-submit.sh ---
+Status: SUCCESS
+Message: File(s) have been downloaded to the folder '/home/user1/Lab/HOL-dashDB/spark'
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-file apps example_utilities.egg
+--- dashDB spark-submit.sh ---
+Status: SUCCESS
+Message: File(s) have been downloaded to the folder '/home/user1/Lab/HOL-dashDB/spark'
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-file apps idax_examples.jar
+--- dashDB spark-submit.sh ---
+Status: SUCCESS
+Message: File(s) have been downloaded to the folder '/home/user1/Lab/HOL-dashDB/spark'
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ ./spark-submit.sh --download-file apps ReadExample.py
+--- dashDB spark-submit.sh ---
+Status: SUCCESS
+Message: File(s) have been downloaded to the folder '/home/user1/Lab/HOL-dashDB/spark'
+user1@ubuntu:~/Lab/HOL-dashDB/spark$ 

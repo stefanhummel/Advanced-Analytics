@@ -1,0 +1,24 @@
+user1@ubuntu:~/Lab/HOL2723-WoW2016$ curl --user "bluadmin:bluadmin" -X POST "https://127.0.1.1:8443/clues/public/samples/load"
+curl: (60) SSL certificate problem: self signed certificate
+More details here: https://curl.haxx.se/docs/sslcerts.html
+
+curl performs SSL certificate verification by default, using a "bundle"
+ of Certificate Authority (CA) public keys (CA certs). If the default
+ bundle file isn't adequate, you can specify an alternate file
+ using the --cacert option.
+If this HTTPS server uses a certificate signed by a CA represented in
+ the bundle, the certificate verification probably failed due to a
+ problem with the certificate (it might be expired, or the name might
+ not match the domain name in the URL).
+If you'd like to turn off curl's verification of the certificate, use
+ the -k (or --insecure) option.
+user1@ubuntu:~/Lab/HOL2723-WoW2016$ curl -k --user "bluadmin:bluadmin" -X POST "https://127.0.1.1:8443/clues/public/samples/load"
+{"username":"bluadmin","status":"ok","resultCode":200,"statusDesc":"The examples have been successfully loaded."}
+user1@ubuntu:~/Lab/HOL2723-WoW2016/spark$ curl -k --user "bluadmin:bluadmin" -X GET "https://127.0.1.1:8443/dashdb-api/home/spark/apps" 
+{"message":"NONE","result":".\/ReadExampleJdbc.py\n.\/ReadExampleJson.py\n.\/ReadWriteExampleKMeansJdbc.py\n.\/ReadWriteExampleKMeansJson.py\n.\/example_utilities.egg\n.\/idax-examples.jar\n","errorMessageCode":"NONE","resultCode":"SUCCESS"}
+
+user1@ubuntu:~/Lab/HOL2723-WoW2016/spark$ curl -k --user "bluadmin:bluadmin" -X GET "https://127.0.1.1:8443/dashdb-api/home/spark/apps/ReadWriteExampleKMeansJson.py" > ReadWriteExampleKMeansJson.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  6356  100  6356    0     0  64393      0 --:--:-- --:--:-- --:--:-- 64857
+

@@ -1,0 +1,3 @@
+user1@ubuntu:~/Lab/HOL2723-WoW2016/spark/examples$ curl -k --user "bluadmin:bluadmin" -X POST -H "Content-Type: multipart/form-data" -F "data=@/home/user1/Lab/HOL2723-WoW2016/spark/examples/ReadExampleJdbc.py" "https://127.0.1.1:8443/dashdb-api/home/spark/apps"
+{"message":"NONE","result":{"filesUploaded":["spark\/apps\/ReadExampleJdbc.py"]},"errorMessageCode":"NONE","resultCode":"SUCCESS"}
+

@@ -1,0 +1,11 @@
+https://spark-service-attr-yp.ng.bluemix.net/spark_service_attr/spark-submit.sh
+Resolving spark-service-attr-yp.ng.bluemix.net (spark-service-attr-yp.ng.bluemix.net)... 169.54.245.68
+Connecting to spark-service-attr-yp.ng.bluemix.net (spark-service-attr-yp.ng.bluemix.net)|169.54.245.68|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-sh]
+Saving to: 'spark-submit.sh'
+
+    [  <=>                                    ] 35,256      83.7KB/s   in 0.4s   
+
+2016-10-04 10:38:46 (83.7 KB/s) - 'spark-submit.sh' saved [35256]
+
