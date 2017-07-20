@@ -1,0 +1,17 @@
+=================================
+dashDB UDX Command Execution Log
+=================================
+Start Time: 09/20/15 11:50:07
+OS: linux
+Client Name: ubuntu
+User: XXXX
+Filename: disconnect2015-09-21_12.20.07.log
+Log Dir: /home/user1/Lab/dashDB/SSB/queries
+Jar Version: xxxx
+API Version: 1.0
+Backend DB Server Version: xxxx
+=================================
+Command: disconnect
+Logging out from https://awh-yp-small02.services.dal.bluemix.net:8443/.
+Resetting cookie store.
+Logged out.
