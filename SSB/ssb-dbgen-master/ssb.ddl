@@ -7,7 +7,7 @@ CREATE TABLE CUSTOMER ( C_CUSTKEY     INTEGER NOT NULL PRIMARY KEY,
                             C_PHONE       VARCHAR(15) NOT NULL,
                             C_MKTSEGMENT  VARCHAR(10) NOT NULL);
 
-CREATE TABLE SSB.DATES ( D_DATEKEY          INTEGER NOT NULL PRIMARY KEY,
+CREATE TABLE SSB.DATES ( D_DATEKEY          INTEGER PRIMARY KEY,
                          D_DATE             VARCHAR(18) NOT NULL,
                          D_DAYOFWEEK        VARCHAR(8) NOT NULL,
                          D_MONTH            VARCHAR(9) NOT NULL,
